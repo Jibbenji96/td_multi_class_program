@@ -4,6 +4,8 @@ class TodoList:
 
 
     def add(self, todo):
+        if not todo:
+            raise Exception("No todo task to add")
         self.task_list.append(todo)
 
 
@@ -13,6 +15,7 @@ class TodoList:
             if entry.complete == False:
                 incomplete_tasks.append(entry)
         return incomplete_tasks
+
 
     def complete(self):
         complete_tasks = []

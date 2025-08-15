@@ -11,13 +11,15 @@ def test_todo_list_returns_incomplete_task_instances():
     todo_list.add(todo1) # returns nothing, adds todo instance to task_list
     todo_list.add(todo2) # returns nothing, adds second todo instance
     # assert todo_list.incomplete() == [todo1]
-    # pass
+    # assert todo_list.complete() == [todo2]
+    pass
 
 def test_todo_list_adds_todo_instance_to_list():
     todo_list = TodoList()
     todo1 = ToDo("First task")
     todo_list.add(todo1)
     assert todo_list.task_list == [todo1]
+
 
 def test_todo_list_returns_incomplete_todo_instances():
     todo_list = TodoList()
